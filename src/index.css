@@ -1,0 +1,37 @@
+:root {
+    height: 100vh;
+    width: 100vw;
+}
+/* map > area {
+    z-index: 100;
+     background-color: blue; 
+    outline-color: yellow;
+    &:hover {
+        outline: 2px solid red;
+    }
+} 
+*/
+
+/* img[usemap]:focus-within ~ map > area {
+    outline: 2px dashed red !important;
+} */
+.area-hover {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.8); /* Полупрозрачный красный цвет */
+    pointer-events: none; /* Позволяет кликнуть сквозь слой */
+}
+
+/* Пример выделения первой области */
+#muscle_1:hover ~ .area-hover:nth-child(1),
+#muscle_2:hover ~ .area-hover:nth-child(2) {
+    opacity: 1 !important;
+}
+
+.area-hover {
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.area-hover.active {
+    opacity: 1;
+}

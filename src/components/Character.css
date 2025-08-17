@@ -1,0 +1,71 @@
+.character {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-family: sans-serif;
+}
+
+.canvas {
+    position: relative;
+    width: 370px;
+    height: 440px;
+    border: 1px solid #ccc;
+    background-color: white;
+    border: 10px solid #ff660c;
+}
+
+.part {
+    cursor: pointer;
+    transition: filter 0.2s, outline 0.2s;
+    outline: 2px solid transparent;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.part.active {
+    filter: hue-rotate(-30deg) saturate(3) brightness(2);
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+}
+
+.controls button {
+    font-family: Playfair Display;
+    background-color: black;
+    border: 0px;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 96px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: white;
+}
+
+.controls button:hover {
+    color: #ff660c;
+}
+.controls button.active {
+    color: #ff660c;
+}
+.character-main-text {
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    font-family: Playfair Display;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+}
