@@ -60,7 +60,7 @@ const Character: React.FC = () => {
                     {parts.map((p, i) => (
                         <img
                             key={p.name + i}
-                            src={`/${p.img}`}
+                            src={`${p.img}`}
                             alt={p.name}
                             className={`part ${active.includes(p.name) ? "active" : ""}`}
                             style={{
