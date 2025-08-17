@@ -1,6 +1,6 @@
 {
     "name": "trenbalon",
-    "private": true,
+    "private": false,
     "version": "0.0.0",
     "homepage": "https://champloo111.github.io/TrenBalon/",
     "type": "module",
