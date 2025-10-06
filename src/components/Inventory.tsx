@@ -15,12 +15,6 @@ interface ISelect {
     tur: boolean;
     gant: boolean;
 }
-const TOOL: Record<string, string> = {
-    gir: "гиря",
-    kulak: "кулак для дрочки",
-    tur: "турник",
-    gant: "гантели",
-};
 
 const Inventory: React.FC<InventoryProps> = memo(({ inventoryData, setInventoryData }) => {
     const [select, setSelect] = useState<ISelect>({

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import footerImage from "../../public/footerPage1.jpg";
 import wwwImage from "../../public/WWW.png";
