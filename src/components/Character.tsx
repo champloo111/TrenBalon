@@ -1,5 +1,4 @@
-// Character.tsx
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Character.css";
 
 interface Part {
@@ -43,13 +42,22 @@ const parts: Part[] = [
         hidden: true,
     },
 ];
+interface ICharacterProps {
+    characterData: string[];
+    setCharacterData: Function;
+}
 
-const Character: React.FC = () => {
-    const [active, setActive] = useState<string[]>([]);
+const Character: React.FC<ICharacterProps> = ({ characterData, setCharacterData }) => {
+    const [active, setActive] = useState<string[]>(characterData);
 
     const toggle = (name: string) =>
         setActive((prev) => (prev.includes(name) ? prev.filter((n) => n !== name) : [...prev, name]));
 
+    useEffect(() => {
+        return () => {
+            setCharacterData(active);
+        };
+    });
     return (
         <>
             <u className="character-main-text">

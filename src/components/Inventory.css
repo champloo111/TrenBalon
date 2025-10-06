@@ -1,0 +1,22 @@
+.inventory-image-cont {
+    position: relative;
+    display: flex;
+    left: 248px;
+    top: 100px;
+    width: 1000px;
+}
+.inventory-el {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
+}
+.inventory-el.active {
+    filter: invert(0.5) sepia(1) saturate(5) hue-rotate(320deg);
+}
+.inventory-image-back {
+    background-color: #ebbebe;
+    border: 15px solid aliceblue;
+    width: 220px;
+    height: 220px;
+    margin-left: 30px;
+}

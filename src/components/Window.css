@@ -1,0 +1,50 @@
+.window-text {
+    width: 415px;
+    height: 402px;
+    angle: 0 deg;
+    position: relative;
+    opacity: 1;
+    left: 92px;
+    font-family: jsMath-cmti10;
+    font-weight: 500;
+    font-style: Italic;
+    font-size: 70px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    z-index: 1;
+    color: #ffffff;
+    padding: 0px;
+}
+.window-button {
+    width: 404px;
+    height: 54px;
+    position: relative;
+    angle: 0 deg;
+    opacity: 1;
+    top: 50px;
+    border-radius: 61px;
+    border-color: #ffffff;
+    border-width: 7px;
+    background-color: black;
+    color: #ffffff;
+    font-family: Playfair Display;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 32px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+.window-image-cont {
+    display: flex;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.window-size-muscle {
+    width: 250px;
+    height: 520px;
+    opacity: 1;
+    padding-left: 40px;
+    object-fit: cover;
+}
