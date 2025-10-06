@@ -4,7 +4,7 @@ import Character from "./components/Character";
 import Window from "./components/Window";
 import Inventory from "./components/Inventory";
 import Download from "./components/Download";
-import InfoButtons from "./components/Infobuttons";
+import InfoButtons from "./components/InfoButtons";
 export enum EPAGES {
     window,
     invent,
