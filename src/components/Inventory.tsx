@@ -4,9 +4,10 @@ import gant from "../../public/gant.png";
 import kulak from "../../public/kulak.png";
 import gir from "../../public/gir.png";
 import tur from "../../public/tur.png";
+import { ETools } from ".";
 
 interface InventoryProps {
-    inventoryData: string[];
+    inventoryData: ETools[];
     setInventoryData: Function;
 }
 interface ISelect {
@@ -18,10 +19,10 @@ interface ISelect {
 
 const Inventory: React.FC<InventoryProps> = memo(({ inventoryData, setInventoryData }) => {
     const [select, setSelect] = useState<ISelect>({
-        gir: inventoryData.includes("Гиря"),
-        kulak: inventoryData.includes("Кулак для дрочки"),
-        tur: inventoryData.includes("Турник"),
-        gant: inventoryData.includes("Гантели"),
+        gir: inventoryData.includes(ETools.Гиря),
+        kulak: inventoryData.includes(ETools.Кулак),
+        tur: inventoryData.includes(ETools.Турник),
+        gant: inventoryData.includes(ETools.Гантели),
     });
 
     const toggleSelect = (key: keyof ISelect) => {
@@ -33,15 +34,15 @@ const Inventory: React.FC<InventoryProps> = memo(({ inventoryData, setInventoryD
             setInventoryData(replaceKey(activeKeys));
         };
     }, [select]);
-    const replaceKey = (arr: string[]): string[] => {
-        const dict: Record<string, string> = {
-            gir: "Гиря",
-            kulak: "Кулак для дрочки",
-            tur: "Турник",
-            gant: "Гантели",
+    const replaceKey = (arr: string[]): ETools[] => {
+        const dict: Record<string, ETools> = {
+            gir: ETools.Гиря,
+            kulak: ETools.Кулак,
+            tur: ETools.Турник,
+            gant: ETools.Гантели,
         };
 
-        return arr.map((el) => dict[el] ?? "Кулак для дрочки");
+        return arr.map((el) => dict[el] ?? ETools.Кулак);
     };
 
     return (

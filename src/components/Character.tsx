@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Character.css";
+import { EMuscles } from ".";
 
 interface Part {
-    name: string;
+    name: EMuscles;
     img: string;
     coords: { x: number; y: number };
     size: { w: number; h: number };
@@ -11,31 +12,31 @@ interface Part {
 
 const parts: Part[] = [
     {
-        name: "Руки",
+        name: EMuscles.Руки,
         img: "left-arm.png",
         coords: { x: 0, y: 15 },
         size: { w: 133, h: 295 },
     },
     {
-        name: "Грудь",
+        name: EMuscles.Грудь,
         img: "chest.png",
         coords: { x: 119, y: 0 },
         size: { w: 132, h: 90 },
     },
     {
-        name: "Торс",
+        name: EMuscles.Торс,
         img: "torso.png",
         coords: { x: 115, y: 74 },
         size: { w: 139, h: 177 },
     },
     {
-        name: "Ноги",
+        name: EMuscles.Ноги,
         img: "legs.png",
         coords: { x: 119, y: 206 },
         size: { w: 131, h: 231 },
     },
     {
-        name: "Руки",
+        name: EMuscles.Руки,
         img: "right-arm.png",
         coords: { x: 236, y: 15 },
         size: { w: 133, h: 295 },

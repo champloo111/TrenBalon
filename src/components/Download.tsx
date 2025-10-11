@@ -1,28 +1,15 @@
 import React from "react";
 import fileImage from "../../public/file.png";
 import "./Download.css";
+import { EXERCISES, type EMuscles, type ETools, type Exercise } from ".";
 
 interface DownloadProps {
-    characterData: string[];
-    inventoryData: string[];
+    characterData: EMuscles[];
+    inventoryData: ETools[];
 }
-export interface Exercise {
-    id: string;
-    name: string;
-    muscles: string[];
-    tools: string[];
-    sets: number;
-    reps: number;
-}
-const EXERCISES: Exercise[] = [
-    { id: "p1", name: "Отжимания", muscles: ["Грудь", "Руки"], tools: ["Кулак для дрочки"], sets: 4, reps: 15 },
-    { id: "p2", name: "Подтягивания", muscles: ["Торс", "Руки"], tools: ["Турник"], sets: 4, reps: 10 },
-    { id: "p3", name: "Приседания с гирей", muscles: ["Ноги"], tools: ["Гиря"], sets: 5, reps: 12 },
-    { id: "p4", name: "Жим гантелей", muscles: ["Грудь", "Руки"], tools: ["Гантели"], sets: 4, reps: 12 },
-    { id: "p5", name: "Планка", muscles: ["Торс"], tools: [], sets: 3, reps: 60 },
-];
 
 const Download: React.FC<DownloadProps> = ({ characterData, inventoryData }) => {
+    console.log(characterData, inventoryData);
     const validExercises = EXERCISES.filter(
         (ex) => ex.muscles.some((m) => characterData.includes(m)) && ex.tools.every((t) => inventoryData.includes(t))
     );
@@ -45,7 +32,7 @@ const Download: React.FC<DownloadProps> = ({ characterData, inventoryData }) => 
     const createWorkout = (list: Exercise[]): string => {
         if (!list.length) return "Тренировка не составлена — ни одно упражнение не подошло.";
 
-        const lines: string[] = ["Жеская ебка", ""];
+        const lines: string[] = ["Ваша тренировка", ""];
 
         list.forEach((ex, idx) => {
             lines.push(`${idx + 1}. ${ex.name}`);
